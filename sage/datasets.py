@@ -46,7 +46,7 @@ def Malware():
                        names=columns)
 
     # Convert label.
-    df['c16'] = (df['c16'] == 1)
+    #df['c16'] = (df['c16'] == 1)
     return df
 
 def bike():
