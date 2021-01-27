@@ -39,22 +39,14 @@ def bank():
     return df
 
 def Malware():
-    columns = ['activities_com_city_ui_activity_GuideActivity','activities_com_city_ui_activity_BeautifulDetailActivity',
-               'activities_com_city_ui_activity_UserProtocolActivity','app_permissions_name_android_permission_SYSTEM_ALERT_WINDOW',
-               's_and_r_com_xiaomi_mipush_sdk_PushMessageHandler','s_and_r_com_city_push_XiaomiMessageReceiver',
-               'activities_com_city_ui_activity_BigPictureActivity','activities_com_tencent_connect_common_AssistActivity',
-               'activities_com_city_ui_activity_ContactUsActivity','app_permissions_name_android_permission_WRITE_SETTINGS'
-        ,'app_permissions_name_android_permission_MOUNT_UNMOUNT_FILESYSTEMS','s_and_r_cn_jpush_android_service_PushService',
-               'intents_cn_jpush_android_intent_NOTIFICATION_RECEIVED','activities__StartActivity,intents_cn_jpush_android_intent_NOTIFICATION_RECEIVED_PROXY',
-               'app_permissions_name_android_permission_GET_TASKS','activities_com_city_ui_activity_SearchActivity','activities_com_tencent_tauth_AuthActivity',
-               'activities_com_city_ui_activity_CollectionActivity','activities_com_city_ui_activity_AboutActivity','app_permissions_name_android_permission_RECORD_AUDIO']
+    columns = ['c1','c2','c3','c4','c5','c6','c7','c8','c9','c10','c11','c12','c13','c14','c15','c16']
 
     path = os.path.join(github_data_url, 'Malware.csv')
     df = pd.read_table(path, sep=';', header=None, index_col=None, skiprows=1,
                        names=columns)
 
     # Convert label.
-    #df['Success'] = (df['Success'] == 'yes')
+    df['c16'] = (df['c16'] == 1)
     return df
 
 def bike():
